@@ -1,0 +1,17 @@
+[
+    {
+        "instruction": "Translate this from French to English:",
+        "input": "French: Nos traditions de nourriture, notre folklore et notre paysage sont maintenus vivant par de petits fermiers de famille.\nEnglish:",
+        "output": "Our food traditions, our folklore and our landscape are kept alive by small family farmers."
+    },
+    {
+        "instruction": "Translate this from English to Chinese:",
+        "input": "English: As a star ages, its spin rate begins to slow down.\nChinese:",
+        "output": "随着恒星年龄的增加，其自转速度开始减慢。"
+    },
+    {
+        "instruction": "Translate this from English to Russian:",
+        "input": "English: After a long Saturday night at my sister-in-law's 40th birthday party in New York, around midnight my heavily pregnant wife decided we'd better get going.\nRussian:",
+        "output": "После долгой вечеринки, устроенной в Нью-Йорке по случаю сорокалетия моей невестки, около полуночи жена, которая тогда была на большом сроке беременности, решила, что нам пора собираться."
+    }
+]
