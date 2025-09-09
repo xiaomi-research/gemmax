@@ -4,7 +4,7 @@
 </div>
 
 <div  align="center">
-<img src='/images/gemmax.png' width='900' height='506'>
+<img src='/images/gemmax.png' width='600' height='337'>
 </div>
 
 GemmaX are many-to-many LLM-based multilingual translation models, which adopt multilingual continual pretraining with Parallel-First Monolingual-Second (PFMS) data mixing strategy and instruction finetuning with high-quality translation prompts.
