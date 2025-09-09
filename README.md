@@ -3,6 +3,10 @@
 # GemmaX: Multilingual Translator based on Gemma Open Models
 </div>
 
+<div  align="center">
+<img src='/images/gemmax.png' width='450' height='253'>
+</div>
+
 GemmaX are many-to-many LLM-based multilingual translation models, which adopt multilingual continual pretraining with Parallel-First Monolingual-Second (PFMS) data mixing strategy and instruction finetuning with high-quality translation prompts.
 
 
