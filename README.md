@@ -7,10 +7,9 @@
 <img src='/images/gemmax.png' width='600' height='337'>
 </div>
 
-GemmaX are many-to-many LLM-based multilingual translation models, which adopt multilingual continual pretraining with Parallel-First Monolingual-Second (PFMS) data mixing strategy and instruction finetuning with high-quality translation prompts.
-
-
 ## Updates
+
+* Jan. 26 2026: The GemmaX3 paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models]() is available on ArXiv!
 
 * Jan. 23 2025: The GemmaX2 paper: [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
@@ -19,6 +18,8 @@ GemmaX are many-to-many LLM-based multilingual translation models, which adopt m
 
 Model checkpoints are released at huggingface:
 
+#### GemmaX2 Models
+
 | Models                                                                             | Descriptions                                                                                     |
 |------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | [GemmaX2-28-2B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-2B-Pretrain) | Developed through continual pretraining of [Gemma2-2B](https://huggingface.co/google/gemma-2-2b) |
@@ -26,7 +27,19 @@ Model checkpoints are released at huggingface:
 | [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Developed through continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b) |
 | [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions                                |
 
-**Note that GemmaX2-28-2B-Pretrain and GemmaX2-28-9B-Pretrain are NOT translation models.**
+#### GemmaX3 Models
+
+| Models                      | Descriptions                                                                                          |
+|-----------------------------|-------------------------------------------------------------------------------------------------------|
+| [GemmaX3-46-1B-Pretrain]()  | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt)   |
+| [GemmaX3-46-1B-v0.1]()      | Finetuned on GemmaX3-46-1B-Pretrain with translation instructions                                     |
+| [GemmaX3-46-4B-Pretrain]()  | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt)   |
+| [GemmaX3-46-4B-v0.1]()      | Finetuned on GemmaX3-46-4B-Pretrain with translation instructions                                     |
+| [GemmaX3-46-12B-Pretrain]() | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt) |
+| [GemmaX3-46-12B-v0.1]()     | Finetuned on GemmaX3-46-12B-Pretrain with translation instructions                                    |
+
+
+**Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, GemmaX3-46-1B-Pretrain, GemmaX3-46-4B-Pretrain, and GemmaX3-46-12B-Pretrain are NOT translation models.**
 
 ## Supported Languages
 
