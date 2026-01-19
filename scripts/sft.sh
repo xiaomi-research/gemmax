@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 
-cd LLaMA-Factory
+cd LlamaFactory
 
-pretrained_model=GemmaX2-28-9B-Pretrain
+pretrained_model=GemmaX3-46-12B-Pretrain
 outputs=checkpoints
-dataset_name=GEMMAX2-28-SFT  # add a dataset description in dataset_info.json before training to use it
+dataset_name=GEMMAX3-46-SFT  # Add a dataset description to dataset_info.json before training to enable its use.
 
 
 llamafactory-cli train \
@@ -16,15 +16,15 @@ llamafactory-cli train \
     --preprocessing_num_workers 64 \
     --finetuning_type full \
     --template empty \
-    --flash_attn disabled \
+    --flash_attn fa2 \
     --dataset_dir data \
     --dataset ${dataset_name} \
-    --cutoff_len 2048 \
+    --cutoff_len 4096 \
     --learning_rate 2e-5 \
     --num_train_epochs 1 \
     --max_samples 100000000 \
-    --per_device_train_batch_size 4 \
-    --gradient_accumulation_steps 8 \
+    --per_device_train_batch_size 2 \
+    --gradient_accumulation_steps 16 \
     --lr_scheduler_type inverse_sqrt \
     --warmup_ratio 0.01 \
     --weight_decay 0.01 \

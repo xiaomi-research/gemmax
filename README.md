@@ -54,15 +54,16 @@ GemmaX3 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Ca
 ```python3
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_id = "ModelSpace/GemmaX2-28-9B-v0.1"
+
+model_id = "GemmaX3-46-4B-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model = AutoModelForCausalLM.from_pretrained(model_id)
 
-text = "Translate this from Chinese to English:\nChinese: 我爱机器翻译\nEnglish:"
+text = "Translate this from Chinese (Simplified) to English:\nChinese (Simplified): 我爱机器翻译\nEnglish:"
 inputs = tokenizer(text, return_tensors="pt")
 
-outputs = model.generate(**inputs, max_new_tokens=512)
+outputs = model.generate(**inputs, max_new_tokens=1024)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
@@ -76,7 +77,7 @@ Translate this from <source language name> into <target language name>:
 
 ## Training
 
-We train our models with the [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework. Please check [here](https://github.com/hiyouga/LLaMA-Factory/tree/main/data) for adding pretraining and finetuning datasets in `LLaMA-Factory`. 
+We train our models with the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) framework. Please check [here](https://github.com/hiyouga/LlamaFactory/tree/main/data) for adding pretraining and finetuning datasets in `LlamaFactory`. 
 
 ### Continual Pretraining
 
@@ -97,6 +98,10 @@ bash scripts/sft.sh
 
 ## Reference
 If you find the resources in this repository helpful, please cite as:
+```
+
+```
+
 ```
 @misc{cui2025multilingualmachinetranslationopen,
       title={Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study}, 
