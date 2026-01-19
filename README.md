@@ -55,7 +55,7 @@ GemmaX3 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Ca
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-model_id = "GemmaX3-46-4B-v0.1"
+model_id = "GemmaX3-46-12B-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model = AutoModelForCausalLM.from_pretrained(model_id)
