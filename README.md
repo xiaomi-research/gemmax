@@ -39,7 +39,7 @@ Model checkpoints are released at huggingface:
 | [GemmaX3-46-12B-v0.1]()     | Finetuned on GemmaX3-46-12B-Pretrain with translation instructions                                    |
 
 
-**Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, GemmaX3-46-1B-Pretrain, GemmaX3-46-4B-Pretrain, and GemmaX3-46-12B-Pretrain are NOT translation models.**
+Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, GemmaX3-46-1B-Pretrain, GemmaX3-46-4B-Pretrain, and GemmaX3-46-12B-Pretrain are **NOT** translation models.
 
 ## Supported Languages
 
