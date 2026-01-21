@@ -59,7 +59,7 @@ from vllm import LLM, SamplingParams
 model_id = "GemmaX3-46-12B-v0.1"
 
 model = LLM(model=model_id)
-sampling_params = SamplingParams(best_of=1, temperature=0, max_tokens=2048)
+sampling_params = SamplingParams(top_k=1, temperature=0, max_tokens=2048)
 
 text = "Translate this from Chinese (Simplified) to English:\nChinese (Simplified): 我爱机器翻译\nEnglish:"
 
