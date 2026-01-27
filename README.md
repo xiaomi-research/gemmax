@@ -87,7 +87,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 The translation prompt is:
 ```text
-Translate this from <source language name> into <target language name>:
+Translate this from <source language name> to <target language name>:
 <source language name>: <source language sentence>
 <target language name>:
 ```
