@@ -9,7 +9,7 @@
 
 ## Updates
 
-* Jan. 26 2026: The GemmaX3 paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models]() is available on ArXiv!
+* Jan. 26 2026: The MiMT paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models]() is available on ArXiv!
 
 * Jan. 23 2025: The GemmaX2 paper: [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
