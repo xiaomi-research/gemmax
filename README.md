@@ -66,7 +66,7 @@ Translate this from <source language name> to <target language name>:
 from vllm import LLM, SamplingParams
 
 
-model_id = "GemmaX3-46-12B-v0.1"
+model_id = "xiaomi-research/MiMT-46-1B-v0.1"
 
 model = LLM(model=model_id)
 sampling_params = SamplingParams(top_k=1, temperature=0, max_tokens=2048)
@@ -82,13 +82,13 @@ print(outputs[0].outputs[0].text)
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-model_id = "GemmaX3-46-12B-v0.1"
+model_id = "xiaomi-research/MiMT-46-1B-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model = AutoModelForCausalLM.from_pretrained(model_id)
 
 text = "Translate this from Chinese (Simplified) to English:\nChinese (Simplified): 我爱机器翻译\nEnglish:"
-inputs = tokenizer(text, return_tensors="pt")
+inputs = tokenizer(text, add_special_tokens=False, return_tensors="pt")
 
 outputs = model.generate(**inputs, max_new_tokens=1024)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
