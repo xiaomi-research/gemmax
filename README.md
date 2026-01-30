@@ -56,7 +56,7 @@ Translate this from <source language name> to <target language name>:
 <source language name>: <source language sentence>
 <target language name>:
 ```
-**Please use the language name specified above in the translation prompt.**
+Please use the language name specified above in the translation prompt.
 
 
 ## Quick Start
