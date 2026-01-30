@@ -45,7 +45,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(model_id)
 
 text = "Translate this from Chinese to English:\nChinese: 我爱机器翻译\nEnglish:"
-inputs = tokenizer(text, return_tensors="pt")
+inputs = tokenizer(text, add_special_tokens=False, return_tensors="pt")
 
 outputs = model.generate(**inputs, max_new_tokens=512)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
