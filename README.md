@@ -41,13 +41,23 @@ Model checkpoints are released at huggingface:
 
 **Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, GemmaX3-46-1B-Pretrain, GemmaX3-46-4B-Pretrain, and GemmaX3-46-12B-Pretrain are NOT translation models.**
 
+
 ## Supported Languages
 
 GemmaX2 models support 28 languages: Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
 
 GemmaX3 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
 
+
+## Translation Prompt
+
+```text
+Translate this from <source language name> to <target language name>:
+<source language name>: <source language sentence>
+<target language name>:
+```
 **Please use the language name specified above in the translation prompt.**
+
 
 ## Quick Start
 
@@ -84,13 +94,6 @@ outputs = model.generate(**inputs, max_new_tokens=1024)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
-
-The translation prompt is:
-```text
-Translate this from <source language name> to <target language name>:
-<source language name>: <source language sentence>
-<target language name>:
-```
 
 ## Training
 
