@@ -18,7 +18,7 @@
 
 Model checkpoints are released at huggingface:
 
-#### GemmaX2 Models
+#### GemmaX2-28 Models
 
 | Models                                                                             | Descriptions                                                                                     |
 |------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
@@ -27,16 +27,16 @@ Model checkpoints are released at huggingface:
 | [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Developed through continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b) |
 | [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions                                |
 
-#### GemmaX3 Models
+#### MiMT-46 Models
 
 | Models                      | Descriptions                                                                                          |
 |-----------------------------|-------------------------------------------------------------------------------------------------------|
-| [GemmaX3-46-1B-Pretrain]()  | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt)   |
-| [GemmaX3-46-1B-v0.1]()      | Finetuned on GemmaX3-46-1B-Pretrain with translation instructions                                     |
-| [GemmaX3-46-4B-Pretrain]()  | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt)   |
-| [GemmaX3-46-4B-v0.1]()      | Finetuned on GemmaX3-46-4B-Pretrain with translation instructions                                     |
-| [GemmaX3-46-12B-Pretrain]() | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt) |
-| [GemmaX3-46-12B-v0.1]()     | Finetuned on GemmaX3-46-12B-Pretrain with translation instructions                                    |
+| [MiMT-46-1B-Pretrain]()  | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt)   |
+| [MiMT-46-1B-v0.1]()      | Finetuned on GemmaX3-46-1B-Pretrain with translation instructions                                     |
+| [MiMT-46-4B-Pretrain]()  | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt)   |
+| [MiMT-46-4B-v0.1]()      | Finetuned on GemmaX3-46-4B-Pretrain with translation instructions                                     |
+| [MiMT-46-12B-Pretrain]() | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt) |
+| [MiMT-46-12B-v0.1]()     | Finetuned on GemmaX3-46-12B-Pretrain with translation instructions                                    |
 
 
 **Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, GemmaX3-46-1B-Pretrain, GemmaX3-46-4B-Pretrain, and GemmaX3-46-12B-Pretrain are NOT translation models.**
