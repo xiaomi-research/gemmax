@@ -83,9 +83,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 model_id = "xiaomi-research/MiMT-46-1B-v0.1"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model = AutoModelForCausalLM.from_pretrained(model_id)
+tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 text = "Translate this from Chinese (Simplified) to English:\nChinese (Simplified): 我爱机器翻译\nEnglish:"
 inputs = tokenizer(text, add_special_tokens=False, return_tensors="pt")
