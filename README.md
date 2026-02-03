@@ -20,13 +20,14 @@ Model checkpoints are released at huggingface:
 
 #### GemmaX2-28 Models
 
-| Models                                                                             | Descriptions                                                                                                     |
-|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| [GemmaX2-28-2B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-2B-Pretrain) | Developed through continual pretraining of [Gemma2-2B](https://huggingface.co/google/gemma-2-2b).                |
-| [GemmaX2-28-2B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-2B-v0.1)         | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions.                                               |
-| [GemmaX2-28-2B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-2B-v0.2)    | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions used for finetuning the Xiaomi MiMT-46 models. |
-| [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Developed through continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b).                |
-| [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions.                                               |
+| Models                                                                             | Descriptions                                                                                      |
+|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| [GemmaX2-28-2B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-2B-Pretrain) | Developed through continual pretraining of [Gemma2-2B](https://huggingface.co/google/gemma-2-2b). |
+| [GemmaX2-28-2B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-2B-v0.1)         | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions (v0.1).                         |
+| [GemmaX2-28-2B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-2B-v0.2)    | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions (v0.2).                         |
+| [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Developed through continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b). |
+| [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.1).                         |
+| [GemmaX2-28-9B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-9B-v0.2)    | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.2).                         |
 
 #### Xiaomi MiMT-46 Models
 
