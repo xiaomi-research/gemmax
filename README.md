@@ -9,7 +9,7 @@
 
 ## Updates
 
-* Feb. 5 2026: The Xiaomi MiMT paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models]() is available on ArXiv!
+* Feb. 5 2026: The MiMT paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models]() is available on ArXiv!
 
 * Jan. 23 2025: The GemmaX2 paper: [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
@@ -33,12 +33,12 @@ Model checkpoints are released at huggingface:
 
 | Models                                                                              | Descriptions                                                                                           |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [MiMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-1B-Pretrain)   | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt).   |
-| [MiMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-1B-v0.1)           | Finetuned on MiMT-46-1B-Pretrain with translation instructions.                                        |
-| [MiMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-4B-Pretrain)   | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt).   |
-| [MiMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-4B-v0.1)           | Finetuned on MiMT-46-4B-Pretrain with translation instructions.                                        |
-| [MiMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-12B-Pretrain) | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt). |
-| [MiMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-12B-v0.1)         | Finetuned on MiMT-46-12B-Pretrain with translation instructions.                                       |
+| [MiMT-46-1B-Pretrain]()   | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt).  |
+| [MiMT-46-1B-v0.1]()       | Finetuned on MiMT-46-1B-Pretrain with translation instructions.                                       |
+| [MiMT-46-4B-Pretrain]()   | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt).  |
+| [MiMT-46-4B-v0.1]()       | Finetuned on MiMT-46-4B-Pretrain with translation instructions.                                       |
+| [MiMT-46-12B-Pretrain]() | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt). |
+| [MiMT-46-12B-v0.1]()     | Finetuned on MiMT-46-12B-Pretrain with translation instructions.                                       |
 
 
 **Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, MiMT-46-1B-Pretrain, MiMT-46-4B-Pretrain, and MiMT-46-12B-Pretrain are NOT translation models.**
@@ -48,7 +48,7 @@ Model checkpoints are released at huggingface:
 
 GemmaX2-28 models support 28 languages: Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
 
-Xiaomi MiMT-46 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
+MiMT-46 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
 
 
 ## Translation Prompt
