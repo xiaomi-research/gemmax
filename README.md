@@ -29,7 +29,7 @@ Model checkpoints are released at huggingface:
 | [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.1).                         |
 | [GemmaX2-28-9B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-9B-v0.2)    | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.2).                         |
 
-#### Xiaomi MiMT-46 Models
+#### MiMT-46 Models
 
 | Models                                                                              | Descriptions                                                                                           |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
