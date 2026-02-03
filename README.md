@@ -7,10 +7,9 @@
 <img src='/images/gemmax.png' width='600' height='337'>
 </div>
 
-GemmaX are many-to-many LLM-based multilingual translation models, which adopt multilingual continual pretraining with Parallel-First Monolingual-Second (PFMS) data mixing strategy and instruction finetuning with high-quality translation prompts.
-
-
 ## Updates
+
+* Jan. 26 2026: The MiMT paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models]() is available on ArXiv!
 
 * Jan. 23 2025: The GemmaX2 paper: [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
@@ -19,6 +18,8 @@ GemmaX are many-to-many LLM-based multilingual translation models, which adopt m
 
 Model checkpoints are released at huggingface:
 
+#### GemmaX2-28 Models
+
 | Models                                                                             | Descriptions                                                                                     |
 |------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | [GemmaX2-28-2B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-2B-Pretrain) | Developed through continual pretraining of [Gemma2-2B](https://huggingface.co/google/gemma-2-2b) |
@@ -26,42 +27,77 @@ Model checkpoints are released at huggingface:
 | [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Developed through continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b) |
 | [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions                                |
 
-**Note that GemmaX2-28-2B-Pretrain and GemmaX2-28-9B-Pretrain are NOT translation models.**
+#### MiMT-46 Models
+
+| Models                      | Descriptions                                                                                          |
+|-----------------------------|-------------------------------------------------------------------------------------------------------|
+| [MiMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-1B-Pretrain)  | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt)   |
+| [MiMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-1B-v0.1)      | Finetuned on MiMT-46-1B-Pretrain with translation instructions                                     |
+| [MiMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-4B-Pretrain)  | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt)   |
+| [MiMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-4B-v0.1)      | Finetuned on MiMT-46-4B-Pretrain with translation instructions                                     |
+| [MiMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-12B-Pretrain) | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt) |
+| [MiMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-12B-v0.1)     | Finetuned on MiMT-46-12B-Pretrain with translation instructions                                    |
+
+
+**Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, MiMT-46-1B-Pretrain, MiMT-46-4B-Pretrain, and MiMT-46-12B-Pretrain are NOT translation models.**
+
 
 ## Supported Languages
 
-GemmaX2 models support 28 languages: Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
+GemmaX2-28 models support 28 languages: Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
 
-**Please use the language name specified above in the translation prompt.**
-
-## Quick Start
-
-```python3
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model_id = "ModelSpace/GemmaX2-28-9B-v0.1"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-
-model = AutoModelForCausalLM.from_pretrained(model_id)
-
-text = "Translate this from Chinese to English:\nChinese: 我爱机器翻译\nEnglish:"
-inputs = tokenizer(text, add_special_tokens=False, return_tensors="pt")
-
-outputs = model.generate(**inputs, max_new_tokens=512)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-```
+MiMT-46 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
 
 
-The translation prompt is:
+## Translation Prompt
+
 ```text
 Translate this from <source language name> to <target language name>:
 <source language name>: <source language sentence>
 <target language name>:
 ```
+Please use the language name specified above in the translation prompt.
+
+
+## Quick Start
+
+#### Using on vLLM:
+```python3
+from vllm import LLM, SamplingParams
+
+
+model_id = "xiaomi-research/MiMT-46-1B-v0.1"
+
+model = LLM(model=model_id)
+sampling_params = SamplingParams(top_k=1, temperature=0, max_tokens=2048)
+
+text = "Translate this from Chinese (Simplified) to English:\nChinese (Simplified): 我爱机器翻译\nEnglish:"
+
+outputs = model.generate(text, sampling_params)
+print(outputs[0].outputs[0].text)
+```
+
+#### Using on Transformers:
+```python3
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+
+model_id = "xiaomi-research/MiMT-46-1B-v0.1"
+
+model = AutoModelForCausalLM.from_pretrained(model_id)
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+text = "Translate this from Chinese (Simplified) to English:\nChinese (Simplified): 我爱机器翻译\nEnglish:"
+inputs = tokenizer(text, add_special_tokens=False, return_tensors="pt")
+
+outputs = model.generate(**inputs, max_new_tokens=1024)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
 
 ## Training
 
-We train our models with the [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) framework. Please check [here](https://github.com/hiyouga/LLaMA-Factory/tree/main/data) for adding pretraining and finetuning datasets in `LLaMA-Factory`. 
+We train our models with the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) framework. Please check [here](https://github.com/hiyouga/LlamaFactory/tree/main/data) for adding pretraining and finetuning datasets in `LlamaFactory`. 
 
 ### Continual Pretraining
 
@@ -82,6 +118,10 @@ bash scripts/sft.sh
 
 ## Reference
 If you find the resources in this repository helpful, please cite as:
+```
+
+```
+
 ```
 @misc{cui2025multilingualmachinetranslationopen,
       title={Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study}, 
