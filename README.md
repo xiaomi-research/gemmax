@@ -31,14 +31,14 @@ Model checkpoints are released at huggingface:
 
 #### Xiaomi MiMT-46 Models
 
-| Models                                                             | Descriptions                                                   |
-|--------------------------------------------------------------------|----------------------------------------------------------------|
-| [MiMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-1B-Pretrain) | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt) |
-| [MiMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-1B-v0.1) | Finetuned on MiMT-46-1B-Pretrain with translation instructions |
-| [MiMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-4B-Pretrain) | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt) |
-| [MiMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-4B-v0.1) | Finetuned on MiMT-46-4B-Pretrain with translation instructions |
-| [MiMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-12B-Pretrain) | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt) |
-| [MiMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-12B-v0.1) | Finetuned on MiMT-46-12B-Pretrain with translation instructions |
+| Models                                                                              | Descriptions                                                                                           |
+|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| [MiMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-1B-Pretrain)   | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt).   |
+| [MiMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-1B-v0.1)           | Finetuned on MiMT-46-1B-Pretrain with translation instructions.                                        |
+| [MiMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-4B-Pretrain)   | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt).   |
+| [MiMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-4B-v0.1)           | Finetuned on MiMT-46-4B-Pretrain with translation instructions.                                        |
+| [MiMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiMT-46-12B-Pretrain) | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt). |
+| [MiMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiMT-46-12B-v0.1)         | Finetuned on MiMT-46-12B-Pretrain with translation instructions.                                       |
 
 
 **Note that GemmaX2-28-2B-Pretrain, GemmaX2-28-9B-Pretrain, MiMT-46-1B-Pretrain, MiMT-46-4B-Pretrain, and MiMT-46-12B-Pretrain are NOT translation models.**
@@ -48,7 +48,7 @@ Model checkpoints are released at huggingface:
 
 GemmaX2-28 models support 28 languages: Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
 
-MiMT-46 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
+Xiaomi MiMT-46 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
 
 
 ## Translation Prompt
