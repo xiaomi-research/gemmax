@@ -4,7 +4,7 @@
 
 <img src='/images/gemmax.png' width='600' height='337'>
 
-**🎮 [Try the live demo on Hugging Face](https://huggingface.co/spaces/xiaomi-research/milmmt-46-translation)**
+**🎮 [Try the live demo on HuggingFace](https://huggingface.co/spaces/xiaomi-research/milmmt-46-translation)**
 
 </div>
 
