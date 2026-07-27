@@ -1,75 +1,74 @@
 <div align="center">
 
 # GemmaX: Multilingual Translator based on Gemma Open Models
-</div>
 
-<div  align="center">
 <img src='/images/gemmax.png' width='600' height='337'>
+
+**🎮 [Try the live demo on Hugging Face](https://huggingface.co/spaces/xiaomi-research/milmmt-46-translation)**
+
 </div>
 
-## Updates
 
-* Feb. 12 2026: The MiLMMT paper: [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models](https://arxiv.org/abs/2602.11961) is available on ArXiv!
+## 📰 Updates
 
-* Jan. 23 2025: The GemmaX2 paper: [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
+* **Feb. 12 2026**: The MiLMMT-v0.1 paper [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models](https://arxiv.org/abs/2602.11961) is available on ArXiv!
+* **Jan. 23 2025**: The GemmaX2 paper [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
 
-## Download Models
+## 📥 Models
 
 Model checkpoints are released at huggingface:
 
-### GemmaX2-28 Models
+> [!IMPORTANT]
+> The `*-Pretrain` checkpoints are **NOT** translation models.
 
-| Models                                                                             | Descriptions                                                                                      |
-|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [GemmaX2-28-2B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-2B-Pretrain) | Developed through continual pretraining of [Gemma2-2B](https://huggingface.co/google/gemma-2-2b). |
-| [GemmaX2-28-2B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-2B-v0.1)         | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions (v0.1).                         |
-| [GemmaX2-28-2B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-2B-v0.2)    | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions (v0.2).                         |
-| [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Developed through continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b). |
-| [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1)         | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.1).                         |
-| [GemmaX2-28-9B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-9B-v0.2)    | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.2).                         |
+### GemmaX2-28
 
+| Model | Description |
+|-------|-------------|
+| [GemmaX2-28-2B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-2B-Pretrain) | Continual pretraining of [Gemma2-2B](https://huggingface.co/google/gemma-2-2b). |
+| [GemmaX2-28-2B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-2B-v0.1) | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions (v0.1). |
+| [GemmaX2-28-2B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-2B-v0.2) | Finetuned on GemmaX2-28-2B-Pretrain with translation instructions (v0.2). |
+| [GemmaX2-28-9B-Pretrain](https://huggingface.co/ModelSpace/GemmaX2-28-9B-Pretrain) | Continual pretraining of [Gemma2-9B](https://huggingface.co/google/gemma-2-9b). |
+| [GemmaX2-28-9B-v0.1](https://huggingface.co/ModelSpace/GemmaX2-28-9B-v0.1) | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.1). |
+| [GemmaX2-28-9B-v0.2](https://huggingface.co/xiaomi-research/GemmaX2-28-9B-v0.2) | Finetuned on GemmaX2-28-9B-Pretrain with translation instructions (v0.2). |
 
-**Note that GemmaX2-28-2B-Pretrain and GemmaX2-28-9B-Pretrain are NOT translation models.**
+### MiLMMT-46
 
-
-### MiLMMT-46 Models
-
-| Models                                                                              | Descriptions                                                                                           |
-|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [MiLMMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-Pretrain) | Developed through continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt).   |
-| [MiLMMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-v0.1)         | Finetuned on MiLMMT-46-1B-Pretrain with translation instructions.                                        |
-| [MiLMMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-Pretrain) | Developed through continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt).   |
-| [MiLMMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-v0.1)         | Finetuned on MiLMMT-46-4B-Pretrain with translation instructions.                                        |
-| [MiLMMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-Pretrain) | Developed through continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt). |
-| [MiLMMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-v0.1)     | Finetuned on MiLMMT-46-12B-Pretrain with translation instructions.                                       |
-
-**Note that MiLMMT-46-1B-Pretrain, MiLMMT-46-4B-Pretrain, and MiLMMT-46-12B-Pretrain are NOT translation models.**
+| Model | Description |
+|-------|-------------|
+| [MiLMMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-Pretrain) | Continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt). |
+| [MiLMMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-v0.1) | Finetuned on MiLMMT-46-1B-Pretrain with translation instructions. |
+| [MiLMMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-Pretrain) | Continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt). |
+| [MiLMMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-v0.1) | Finetuned on MiLMMT-46-4B-Pretrain with translation instructions. |
+| [MiLMMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-Pretrain) | Continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt). |
+| [MiLMMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-v0.1) | Finetuned on MiLMMT-46-12B-Pretrain with translation instructions. |
 
 
-## Supported Languages
+## 🌍 Supported Languages
 
-GemmaX2-28 models support 28 languages: Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
+**GemmaX2-28 (28 languages):** Arabic, Bengali, Czech, German, English, Spanish, Persian, French, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Burmese, Dutch, Polish, Portuguese, Russian, Thai, Tagalog, Turkish, Urdu, Vietnamese, Chinese.
 
-MiLMMT-46 models support 46 languages: Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
+**MiLMMT-46 (46 languages):** Arabic, Azerbaijani, Bulgarian, Bengali, Catalan, Czech, Danish, German, Greek, English, Spanish, Persian, Finnish, French, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Kazakh, Khmer, Korean, Lao, Malay, Burmese, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Tamil, Thai, Tagalog, Turkish, Urdu, Uzbek, Vietnamese, Cantonese, Chinese (Simplified), Chinese (Traditional).
 
 
-## Translation Prompt
+## 📝 Translation Prompt
+
+The models expect the following prompt format. Use the exact language names listed under [Supported Languages](#-supported-languages).
 
 ```text
 Translate this from <source language name> to <target language name>:
 <source language name>: <source language sentence>
 <target language name>:
 ```
-Please use the language name specified above in the translation prompt.
 
 
-## Quick Start
+## 🚀 Quick Start
 
-#### Using on vLLM:
-```python3
+#### vLLM
+
+```python
 from vllm import LLM, SamplingParams
-
 
 model_id = "xiaomi-research/MiLMMT-46-12B-v0.1"
 
@@ -82,10 +81,10 @@ outputs = model.generate(text, sampling_params)
 print(outputs[0].outputs[0].text)
 ```
 
-#### Using on Transformers:
-```python3
-from transformers import AutoModelForCausalLM, AutoTokenizer
+#### Transformers
 
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "xiaomi-research/MiLMMT-46-12B-v0.1"
 
@@ -100,13 +99,13 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
 
-## Training
+## 🏋️ Training
 
-We train our models with the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) framework. Please check [here](https://github.com/hiyouga/LlamaFactory/tree/main/data) for adding pretraining and finetuning datasets in `LlamaFactory`. 
+We train our models with the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) framework. See the [LlamaFactory data docs](https://github.com/hiyouga/LlamaFactory/tree/main/data) for how to register pretraining and finetuning datasets. Remember to add your dataset to `dataset_info.json` before training.
 
 ### Continual Pretraining
 
-The data samples for multilingual continual pretraining are listed in `examples/cpt.json`. Check the following command for reference:
+Data samples for multilingual continual pretraining are in [`examples/cpt.json`](examples/cpt.json). Run:
 
 ```bash
 bash scripts/cpt.sh
@@ -114,16 +113,18 @@ bash scripts/cpt.sh
 
 ### Supervised Finetuning
 
-The data samples for translation instruction finetuning are listed in `examples/sft.json`. Check the following command for reference:
+Data samples for translation instruction finetuning are in [`examples/sft.json`](examples/sft.json). Run:
 
 ```bash
 bash scripts/sft.sh
 ```
 
 
-## Reference
-If you find the resources in this repository helpful, please cite as:
-```
+## 📚 Reference
+
+If you find the resources in this repository helpful, please cite:
+
+```bibtex
 @misc{shang2026scalingmodeldatamultilingual,
       title={Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models}, 
       author={Yuzhe Shang and Pengzhi Gao and Wei Liu and Jian Luan and Jinsong Su},
@@ -135,7 +136,7 @@ If you find the resources in this repository helpful, please cite as:
 }
 ```
 
-```
+```bibtex
 @inproceedings{cui-etal-2025-multilingual,
     title = "Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study",
     author = "Cui, Menglong  and
