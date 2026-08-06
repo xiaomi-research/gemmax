@@ -39,10 +39,13 @@ Model checkpoints are released at huggingface:
 |-------|-------------|
 | [MiLMMT-46-1B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-Pretrain) | Continual pretraining of [Gemma3-1B](https://huggingface.co/google/gemma-3-1b-pt). |
 | [MiLMMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-v0.1) | Finetuned on MiLMMT-46-1B-Pretrain with translation instructions. |
+| [MiLMMT-46-1B-v1.0](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-v1.0) | Reinforcement learning and model merging on [MiLMMT-46-1B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-1B-v0.1). |
 | [MiLMMT-46-4B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-Pretrain) | Continual pretraining of [Gemma3-4B](https://huggingface.co/google/gemma-3-4b-pt). |
 | [MiLMMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-v0.1) | Finetuned on MiLMMT-46-4B-Pretrain with translation instructions. |
+| [MiLMMT-46-4B-v1.0](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-v1.0) | Reinforcement learning and model merging on [MiLMMT-46-4B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-4B-v0.1). |
 | [MiLMMT-46-12B-Pretrain](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-Pretrain) | Continual pretraining of [Gemma3-12B](https://huggingface.co/google/gemma-3-12b-pt). |
 | [MiLMMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-v0.1) | Finetuned on MiLMMT-46-12B-Pretrain with translation instructions. |
+| [MiLMMT-46-12B-v1.0](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-v1.0) | Reinforcement learning and model merging on [MiLMMT-46-12B-v0.1](https://huggingface.co/xiaomi-research/MiLMMT-46-12B-v0.1). |
 
 
 ## 🌍 Supported Languages
@@ -70,7 +73,7 @@ Translate this from <source language name> to <target language name>:
 ```python
 from vllm import LLM, SamplingParams
 
-model_id = "xiaomi-research/MiLMMT-46-12B-v0.1"
+model_id = "xiaomi-research/MiLMMT-46-12B-v1.0"
 
 model = LLM(model=model_id)
 sampling_params = SamplingParams(top_k=1, temperature=0, max_tokens=2048)
@@ -86,7 +89,7 @@ print(outputs[0].outputs[0].text)
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_id = "xiaomi-research/MiLMMT-46-12B-v0.1"
+model_id = "xiaomi-research/MiLMMT-46-12B-v1.0"
 
 model = AutoModelForCausalLM.from_pretrained(model_id)
 tokenizer = AutoTokenizer.from_pretrained(model_id)
