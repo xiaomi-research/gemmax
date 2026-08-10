@@ -104,7 +104,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 ## 🏋️ Training
 
-We train our models with the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) framework. See the [LlamaFactory data docs](https://github.com/hiyouga/LlamaFactory/tree/main/data) for how to register pretraining and finetuning datasets. Remember to add your dataset to `dataset_info.json` before training.
+We use [LlamaFactory](https://github.com/hiyouga/LlamaFactory) for continual pretraining and supervised finetuning. See the [LlamaFactory data docs](https://github.com/hiyouga/LlamaFactory/tree/main/data) for how to register those datasets. Remember to add your dataset to `dataset_info.json` before training.
 
 ### Continual Pretraining
 
@@ -122,6 +122,16 @@ Data samples for translation instruction finetuning are in [`examples/sft.json`]
 bash scripts/sft.sh
 ```
 
+### Reinforcement Learning and Model Merging
+
+MiLMMT-46-v1.0 adds GRPO fine-tuning with [verl](https://github.com/volcengine/verl), exports the resulting FSDP actor checkpoint to Hugging Face format, and linearly interpolates the SFT and RL weights.
+
+- GRPO launcher and reward client: [`scripts/rl/run_grpo.sh`](scripts/rl/run_grpo.sh)
+- Batched xCOMET/OpenLID and CometKiwi services: [`scripts/rl/servers`](scripts/rl/servers)
+- `verl` checkpoint export: [`scripts/rl/export_hf_checkpoint.sh`](scripts/rl/export_hf_checkpoint.sh)
+- SFT/RL weight interpolation: [`scripts/rl/linear_merge.py`](scripts/rl/linear_merge.py)
+
+See [`scripts/rl/README.md`](scripts/rl/README.md) for installation, input schema, reward-service deployment, APIs, and example commands.
 
 ## 📚 Reference
 

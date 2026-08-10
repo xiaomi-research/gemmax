@@ -1,1 +1,25 @@
 .idea/
+
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+
+# Training artifacts and caches
+.cache/
+outputs/
+checkpoints/
+logs/
+wandb/
+merged_hf_step*/
+
+# Datasets and model weights
+*.parquet
+*.safetensors
+pytorch_model*.bin
+*.ckpt
+*.pt
+*.pth
