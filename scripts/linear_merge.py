@@ -9,6 +9,11 @@ Both inputs must use the same architecture and safetensors parameter names.
 Tensors are processed shard by shard, and the output shard layout and metadata
 follow the RL checkpoint. Gemma 3 tied embeddings are written without a
 separate ``lm_head.weight`` tensor.
+
+``alpha`` must be finite and within ``[0, 1]``; values outside this range are
+rejected. The output directory must not already exist unless ``--overwrite`` is
+supplied. The merged checkpoint includes a ``merge_manifest.json`` recording the
+formula, weights, and inputs.
 """
 
 from __future__ import annotations

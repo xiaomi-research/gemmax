@@ -1,4 +1,4 @@
-# GRPO Fine-tuning and Model Merging
+# GRPO Fine-tuning
 
 This directory contains the code used for the MiLMMT-46 reinforcement-learning workflow:
 
@@ -8,7 +8,6 @@ This directory contains the code used for the MiLMMT-46 reinforcement-learning w
 - `servers/run_qe_server.sh`: launch one xCOMET or CometKiwi service process.
 - `servers/start_reward_servers.sh`: launch xCOMET/OpenLID and CometKiwi GPU pools.
 - `export_hf_checkpoint.sh`: convert a sharded `verl` FSDP actor checkpoint to Hugging Face format.
-- `linear_merge.py`: linearly interpolate the SFT and RL Hugging Face checkpoints.
 
 ## Environment
 
@@ -206,26 +205,3 @@ bash scripts/rl/export_hf_checkpoint.sh /path/to/experiment
 The default output is `/path/to/experiment/merged_hf_step<STEP>`. Set `TARGET_DIR` to choose another directory.
 `BASE_MODEL_DIR` is only used to restore missing processor configuration files for multimodal Gemma 3 checkpoints.
 The exporter refuses to overwrite an existing output directory.
-
-## Merge SFT and RL Weights
-
-Both inputs must already be Hugging Face safetensors checkpoints with the same architecture. `model_a` is the SFT
-checkpoint and receives weight `alpha`; `model_b` is the exported RL checkpoint and receives weight `1 - alpha`:
-
-```text
-theta_merged = alpha * theta_SFT + (1 - alpha) * theta_RL
-```
-
-For an equal interpolation:
-
-```bash
-python3 scripts/rl/linear_merge.py \
-  --model_a /path/to/MiLMMT-46-12B-v0.1 \
-  --model_b /path/to/experiment/merged_hf_step714 \
-  --alpha 0.5 \
-  --out /path/to/MiLMMT-46-12B-v1.0
-```
-
-The output follows the RL checkpoint's shard layout and metadata and includes `merge_manifest.json`. The script
-rejects `alpha` values outside `[0, 1]` and refuses to overwrite an existing output directory unless
-`--overwrite` is supplied.
