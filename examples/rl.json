@@ -1,0 +1,48 @@
+[
+  {
+    "data_source": "mt/sft_dataset_v11",
+    "prompt": [
+      {
+        "role": "user",
+        "content": "Translate this from English to Chinese (Simplified):\nEnglish: I was buying new tires.\nChinese (Simplified):"
+      }
+    ],
+    "ability": "translation",
+    "reward_model": {
+      "style": "rule",
+      "ground_truth": "我当时正在买新轮胎。"
+    },
+    "extra_info": {
+      "index": 130492,
+      "prompt": "Translate this from English to Chinese (Simplified):\nEnglish: I was buying new tires.\nChinese (Simplified):",
+      "reference": "我当时正在买新轮胎。",
+      "source": "I was buying new tires.",
+      "source_language": "English",
+      "target_language": "Chinese (Simplified)",
+      "split": "train"
+    }
+  },
+  {
+    "data_source": "mt/sft_dataset_v11",
+    "prompt": [
+      {
+        "role": "user",
+        "content": "Translate this from English to Chinese (Simplified):\nEnglish: It was a gesture that ended a crisis.\nChinese (Simplified):"
+      }
+    ],
+    "ability": "translation",
+    "reward_model": {
+      "style": "rule",
+      "ground_truth": "这一举动化解了一场危机。"
+    },
+    "extra_info": {
+      "index": 141238,
+      "prompt": "Translate this from English to Chinese (Simplified):\nEnglish: It was a gesture that ended a crisis.\nChinese (Simplified):",
+      "reference": "这一举动化解了一场危机。",
+      "source": "It was a gesture that ended a crisis.",
+      "source_language": "English",
+      "target_language": "Chinese (Simplified)",
+      "split": "val"
+    }
+  }
+]
