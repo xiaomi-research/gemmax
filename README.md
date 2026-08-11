@@ -11,6 +11,7 @@
 
 ## 📰 Updates
 
+* **Aug. xx 2026**: The MiLMMT-v1.0 paper [Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation]() is available on ArXiv!
 * **Feb. 12 2026**: The MiLMMT-v0.1 paper [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models](https://arxiv.org/abs/2602.11961) is available on ArXiv!
 * **Jan. 23 2025**: The GemmaX2 paper [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
@@ -104,7 +105,9 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 ## 🏋️ Training
 
-We use [LlamaFactory](https://github.com/hiyouga/LlamaFactory) for continual pretraining and supervised finetuning. See the [LlamaFactory data docs](https://github.com/hiyouga/LlamaFactory/tree/main/data) for how to register those datasets. Remember to add your dataset to `dataset_info.json` before training.
+We use [LlamaFactory](https://github.com/hiyouga/LlamaFactory) for continual pretraining and supervised finetuning, and [verl](https://github.com/volcengine/verl) for reinforcement learning. 
+
+See the [LlamaFactory data docs](https://github.com/hiyouga/LlamaFactory/tree/main/data) for how to register those datasets. Remember to add your dataset to `dataset_info.json` before training.
 
 ### Continual Pretraining
 
@@ -122,20 +125,42 @@ Data samples for translation instruction finetuning are in [`examples/sft.json`]
 bash scripts/sft.sh
 ```
 
-### Reinforcement Learning and Model Merging
+### Reinforcement Learning
 
-MiLMMT-46-v1.0 adds GRPO fine-tuning with [verl](https://github.com/volcengine/verl), exports the resulting FSDP actor checkpoint to Hugging Face format, and linearly interpolates the SFT and RL weights.
+An example of the RL input format is in [`examples/rl.json`](examples/rl.json). The pipeline scripts are:
 
 - GRPO launcher and reward client: [`scripts/rl/run_grpo.sh`](scripts/rl/run_grpo.sh)
 - Batched xCOMET/OpenLID and CometKiwi services: [`scripts/rl/servers`](scripts/rl/servers)
-- `verl` checkpoint export: [`scripts/rl/export_hf_checkpoint.sh`](scripts/rl/export_hf_checkpoint.sh)
-- SFT/RL weight interpolation: [`scripts/rl/linear_merge.py`](scripts/rl/linear_merge.py)
 
-See [`scripts/rl/README.md`](scripts/rl/README.md) for installation, input schema, reward-service deployment, APIs, and example commands.
+See [`scripts/rl/README.md`](scripts/rl/README.md) for installation, reward-service deployment, and the full launch command.
+
+### Model Merging
+
+After RL training, linearly interpolate the SFT and RL weights:
+
+```bash
+python3 scripts/linear_merge.py \
+  --model_a /path/to/MiLMMT-46-12B-v0.1 \
+  --model_b /path/to/MiLMMT-46-12B-v0.1-RL \
+  --alpha 0.5 \
+  --out /path/to/MiLMMT-46-12B-v1.0
+```
 
 ## 📚 Reference
 
 If you find the resources in this repository helpful, please cite:
+
+```bibtex
+@misc{,
+      title={Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation}, 
+      author={Chris Han and Pengzhi Gao and Pei Fu and Jian Luan},
+      year={2026},
+      eprint={},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={}, 
+}
+```
 
 ```bibtex
 @misc{shang2026scalingmodeldatamultilingual,
