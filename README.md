@@ -1,8 +1,13 @@
 <div align="center">
 
-# GemmaX: Multilingual Translator based on Gemma Open Models
+# GemmaX / MiLMMT: Multilingual Translator based on Gemma Open Models
 
-<img src='/images/gemmax.png' width='600' height='337'>
+<table align="center"><tr>
+<td><img src='/images/gemmax.png' width='400' height='225'></td>
+<td><img src='/images/milmmt.png' width='400' height='225'></td>
+</tr></table>
+
+> **🚀 GemmaX has been upgraded to MiLMMT-v1.0!** Supported languages have expanded from **28** to **46**!
 
 **🎮 [Try the live demo on HuggingFace](https://huggingface.co/spaces/xiaomi-research/milmmt-46-translation)**
 
