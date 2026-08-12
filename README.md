@@ -11,7 +11,7 @@
 
 ## 📰 Updates
 
-* **Aug. xx 2026**: The MiLMMT-v1.0 paper [Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation]() is available on ArXiv!
+* **Aug. xx 2026**: The MiLMMT-v1.0 paper [Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation](https://arxiv.org/abs/2608.10812) is available on ArXiv!
 * **Feb. 12 2026**: The MiLMMT-v0.1 paper [Scaling Model and Data for Multilingual Machine Translation with Open Large Language Models](https://arxiv.org/abs/2602.11961) is available on ArXiv!
 * **Jan. 23 2025**: The GemmaX2 paper [Multilingual Machine Translation with Open Large Language Models at Practical Scale: An Empirical Study](https://arxiv.org/abs/2502.02481) has been accepted at **NAACL 2025**!
 
