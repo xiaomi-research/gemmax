@@ -7,8 +7,8 @@
 <td><img src='/images/milmmt.png' width='450' height='253'></td>
 </tr></table>
 
-> **🚀 GemmaX has been upgraded to MiLMMT-v1.0 — our most powerful translation model to date!** <br>
-> **Supported languages have expanded from 28 to 46!**
+**🚀 GemmaX has been upgraded to MiLMMT-v1.0 — our most powerful translation model to date!** <br>
+**Supported languages have expanded from 28 to 46!**
 
 **🎮 [Try the live demo on HuggingFace](https://huggingface.co/spaces/xiaomi-research/milmmt-46-translation)**
 
