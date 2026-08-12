@@ -151,14 +151,14 @@ python3 scripts/linear_merge.py \
 If you find the resources in this repository helpful, please cite:
 
 ```bibtex
-@misc{,
+@misc{han2026referencefreeposttrainingopenlarge,
       title={Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation}, 
       author={Chris Han and Pengzhi Gao and Pei Fu and Jian Luan},
       year={2026},
-      eprint={},
+      eprint={2608.10812},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={}, 
+      url={https://arxiv.org/abs/2608.10812}, 
 }
 ```
 
