@@ -10,7 +10,7 @@
 **🚀 GemmaX has been upgraded to MiLMMT-v1.0 — our most powerful translation model to date!** <br>
 **Supported languages have expanded from 28 to 46!**
 
-**🎮 [Try the live demo on HuggingFace](https://huggingface.co/spaces/xiaomi-research/milmmt-46-translation)**
+**🎮 [Try the live demo on HuggingFace](https://huggingface.co/xiaomi-research/spaces)**
 
 </div>
 
